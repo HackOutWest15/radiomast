@@ -1,8 +1,19 @@
 //Ionic overrides
 @import '_ionicOverrides';
-// 
+//
 // Ionic & Ionicons
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons';
 
 
+
+.ion-slide {
+  text-align: center;
+  padding-top: 200px;
+
+  &.dark-bg {
+    h3 {
+      color: #fff;
+    }
+  }
+}

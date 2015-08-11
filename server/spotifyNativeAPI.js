@@ -15,10 +15,9 @@ Meteor.methods({
              Accept: "application/json"
          }
     });
-    console.log(result.data.tracks.items[0].uri);
-    return result.data.tracks.items[0].uri;
 
-    //console.log(result.content);
-    //console.log(result.data);
+    //console.log(result.data.tracks.items[0]);
+    return result.data.tracks.items[0];
+
   }
 });

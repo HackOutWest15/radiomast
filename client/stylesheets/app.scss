@@ -1,4 +1,8 @@
-// Ionicons
-// Ionic
+//Ionic overrides
+@import '_ionicOverrides';
+// 
+// Ionic & Ionicons
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons';
+
+

@@ -1,5 +1,6 @@
 SongPlayer = null;
 
+
 Session.setDefault('crossfade', 0);
 Session.setDefault('currentSong', 'spotify:track:6JEK0CvvjDjjMUBFoXShNZ');
 

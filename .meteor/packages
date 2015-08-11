@@ -19,3 +19,5 @@ meteoric:ionicons-sass
 cfs:standard-packages
 cfs:gridfs
 http
+aldeed:collection2
+streams

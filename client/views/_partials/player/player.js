@@ -37,16 +37,27 @@ Template.player.events({
 
         if(uri.length == 0) return;
 
-        Session.set('currentSong', uri);
+        //Session.set('currentSong', uri); <-----------
 
-        SongPlayer.play(uri, function(err){
+        Meteor.call("emitSong", uri);
+        Meteor.call('addSong', uri);
+
+        /*SongPlayer.play(uri, function(err){
           console.log(err);
           console.log('1336 1336');
-        });
+        });*/
    },
    'input [data-crossfade]': function (event) {
       var sliderValue = parseInt(event.currentTarget.value) / 100;
       console.log(sliderValue);
       Session.set('crossfade', sliderValue.toString());
+   },
+   'click [add-broadcaster]': function (event) {
+      Meteor.call("addBroadcast");
+   },
+   'click [add-listener]': function (event) {
+      Meteor.call("setBroadcast");
+     // Meteor.call("listen", "bgrn");
+        
    }
 });

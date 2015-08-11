@@ -1,16 +1,3 @@
 <template name="MainLayout">
-  {{#ionBody}}
-    {{#ionSideMenuContainer}}
-
-      {{#ionSideMenus}}
-      {{/ionSideMenus}}
-
-      {{#ionSideMenuContent}}
-        {{#ionNavView}}
-          {{> yield}}
-        {{/ionNavView}}
-      {{/ionSideMenuContent}}
-
-    {{/ionSideMenuContainer}}
-  {{/ionBody}}
+{{> yield}}
 </template>

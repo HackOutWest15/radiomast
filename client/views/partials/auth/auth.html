@@ -1,0 +1,9 @@
+<template name="auth">
+  {{#if currentUser}}
+    <button class="btn" data-logout-spotify>Log out</button>
+  {{else}}
+    <button class="btn mode--primary" data-login-spotify>Sign in to Spotify</button>
+  {{/if}}
+
+</template>
+

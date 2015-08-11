@@ -1,5 +1,12 @@
 <template name="me">
-  {{> navbar}}
-  <h1>{{currentUser.profile.id}}</h1>
-  <h3>{{currentUser.profile.display_name}}</h3>
+  {{> navbarSettings}}
+  {{#ionView}}
+    {{#ionContent class="padding"}}
+
+      <h1>{{currentUser.profile.id}}</h1>
+      <h3>{{currentUser.profile.display_name}}</h3>
+      {{> auth}}
+
+    {{/ionContent}}
+  {{/ionView}}
 </template>

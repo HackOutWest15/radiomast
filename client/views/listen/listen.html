@@ -1,11 +1,15 @@
 <template name="listen">
-  {{> navbar}}
-  <div class="padding">
-    <h1>List with a lot of cool radio channels</h1>
+  {{> navbarSettings}}
+  {{#ionView}}
+    {{#ionContent class="padding"}}
+      <div class="padding">
+        <h1>List with a lot of cool radio channels</h1>
 
-        {{> latestBroadcasts}}
+            {{> latestBroadcasts}}
 
-    <p id="media">Recording audio...</p>
-    <p id="audio_position"></p>
-  </div>
+        <p id="media">Recording audio...</p>
+        <p id="audio_position"></p>
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
 </template>

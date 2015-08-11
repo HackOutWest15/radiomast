@@ -1,4 +1,4 @@
-p# Meteor packages used by this project, one per line.
+# Meteor packages used by this project, one per line.
 # Check this file (and the other files in this directory) into your repository.
 #
 # 'meteor add' and 'meteor remove' will edit this file for you,
@@ -16,7 +16,6 @@ fourseven:scss@2.0.0
 meteoric:ionic
 meteoric:ionic-sass
 meteoric:ionicons-sass
-meteoric:ionic
 cfs:standard-packages
 cfs:gridfs
 http

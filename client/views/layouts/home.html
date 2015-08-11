@@ -1,16 +1,22 @@
 <template name="HomeLayout">
-{{#ionBody}}
+  {{#ionBody}}
 
-  {{#ionView}}
-    {{#ionContent}}
-      {{>yield}}
-    {{/ionContent}}
-  {{/ionView}}
+    {{#ionSideMenuContainer}}
+      {{#ionSideMenus}}
+        {{> leftSideMenu}}
+        {{> rightSideMenu}}
+      {{/ionSideMenus}}
 
-  {{#ionTabs class="tabs-positive tabs-icon-top"}}
-    {{> ionTab title="home" path="home" iconOff="earth" iconOn="earth"}}
-    {{> ionTab title="broadcast" path="broadcast" iconOff="radio-waves" iconOn="radio-waves"}}
-  {{/ionTabs}}
+      {{#ionSideMenuContent}}
+            {{#ionView}}
+              {{#ionContent}}
+                {{> yield}}
+              {{/ionContent}}
+            {{/ionView}}
+      {{/ionSideMenuContent}}
 
-{{/ionBody}}
+    {{/ionSideMenuContainer}}
+
+  {{/ionBody}}
 </template>
+

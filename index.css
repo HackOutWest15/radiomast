@@ -1,0 +1,12 @@
+/* CSS declarations go here */
+
+body {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #27272b;
+  color: white;
+}
+
+section {
+  margin: 50px 0  ;
+}

@@ -1,4 +1,6 @@
 App.accessRule('*://api.spotify.com/*');
+App.accessRule('http://*');
+App.accessRule('https://*');
 
 App.setPreference('StatusBarOverlaysWebView', true);
 App.setPreference('StatusBarStyle', 'lightcontent');

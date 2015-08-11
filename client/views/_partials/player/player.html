@@ -3,9 +3,17 @@
     <input name="song-query" placeholder="Search song">
   </form>
     <button class="btn mode--primary" data-search>Search Song</button>
-    
+
   <form>
     <input name="song-uri" placeholder="Enter song URI here">
   </form>
     <button class="btn mode--primary" data-play>Play Song</button>
+
+  <div>
+    <h2>{{title}}</h2>
+    <h4>{{artist}}</h4>
+    <h4>{{album}}</h4>
+    <img src="{{albumArtURL}}"/>
+  </div>
+
 </template>

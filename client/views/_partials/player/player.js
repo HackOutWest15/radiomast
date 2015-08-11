@@ -1,3 +1,18 @@
+Template.player.helpers({
+  title: function () {
+    return Session.get('title');
+  },
+  artist: function () {
+    return Session.get('artist');
+  },
+  album: function () {
+    return Session.get('album');
+  },
+  albumArtURL: function () {
+    return Session.get('albumArtURL');
+  }
+});
+
 Template.player.events({
   'click [data-search]': function () {
       console.log('Search');
@@ -7,28 +22,36 @@ Template.player.events({
 
         var query = $('input').val();
 
-        // spotify.search(query, 'tracks', function(error, result) {
-        //   if(error){
-        //     return console.log(error);
-        //   }
-        //   console.log(result);
-        // });
-
 
         Meteor.call('getSearch', query, function(err, result){
           if(err){
             return console.log(err);
           }
 
-          $('input[name="song-uri"]').val(result);
+          // Add song uri to field
+          $('input[name="song-uri"]').val(result.uri);
+
+          // Get info from track
+          var title = result.name;
+          console.log(title);
+          var artist = result.artists[0].name;
+          console.log(artist);
+          var album = result.album.name;
+          console.log(album);
+          var albumArtURL = result.album.images[1].url;
+          console.log(albumArtURL);
+
+          // Push info to html
+          Session.set('title', title);
+          Session.set('artist', artist);
+          Session.set('album', album);
+          Session.set('albumArtURL', albumArtURL);
+
+
+
         });
 
-        // Session.set('currentSong', uri);
-        //
-        // SongPlayer.play(uri, function(err){
-        //   console.log(err);
-        //   console.log('1336 1336');
-        // });
+
    },
   'click [data-play]': function () {
       console.log('@#!@#!@#');

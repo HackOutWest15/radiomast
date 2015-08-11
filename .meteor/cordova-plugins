@@ -1,1 +1,5 @@
 com.timflapper.spotify@https://github.com/reimertz/cordova-spotify-plugin/tarball/e4470458f585e2da5c87ba7e2b07bc94244a39f8
+com.voicekick.cordova.microphone@1.2.1
+org.apache.cordova.media@https://github.com/reimertz/cordova-plugin-media/tarball/dce6e71492d6331880ff698714c0e203b044b7d0
+org.apache.cordova.media-capture@0.3.6
+org.apache.cordova.statusbar@0.1.9

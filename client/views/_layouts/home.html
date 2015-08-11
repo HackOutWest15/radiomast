@@ -1,0 +1,20 @@
+<template name="HomeLayout">
+  {{#ionBody}}
+    {{#ionSideMenuContainer}}
+
+      {{#ionSideMenus}}
+        {{> leftSideMenu}}
+        {{> rightSideMenu}}
+      {{/ionSideMenus}}
+
+      {{#ionSideMenuContent}}
+        {{#ionNavView}}
+          {{> yield}}
+        {{/ionNavView}}
+
+      {{/ionSideMenuContent}}
+
+    {{/ionSideMenuContainer}}
+
+  {{/ionBody}}
+</template>

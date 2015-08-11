@@ -1,7 +1,11 @@
 <template name="splash">
-  <h1>Welcome to radiomast spalsh</h1>
+{{#ionView}}
+  {{#ionContent class="padding"}}
+    <h1>Welcome to radiomast spalsh</h1>
 
-  <section>
-    {{> auth}}
-  </section>
+    <section>
+      {{> auth}}
+    </section>
+  {{/ionContent}}
+{{/ionView}}
 </template>

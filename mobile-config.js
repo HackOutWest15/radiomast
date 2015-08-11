@@ -1,5 +1,8 @@
 App.accessRule('*://api.spotify.com/*');
 
+App.setPreference('StatusBarOverlaysWebView', true);
+App.setPreference('StatusBarStyle', 'lightcontent');
+
 // // This section sets up some basic app metadata,
 // // the entire section is optional.
 // App.info({

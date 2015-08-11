@@ -1,17 +1,18 @@
 <template name="broadcast">
-  <h1>broadcast</h1>
+  {{> navbarSettings}}
 
-  <section>
-    {{> player}}
-  </section>
+  {{#ionView}}
+    {{#ionContent class="padding"}}
+      <h1>broadcast 2</h1>
 
-  <section>
-    {{> crossfade}}
-  </section>
+      <section>
+        {{> player}}
+      </section>
 
-  <section>
-    {{> recorder}}
-  </section>
-
+      <section>
+        {{> crossfade}}
+      </section>
+    {{/ionContent}}
+  {{/ionView}}
 </template>
 

@@ -9,11 +9,13 @@ autopublish
 insecure
 xinranxiao:accounts-spotify
 msavin:mongol
+
+# meteoric
 iron:router
 fourseven:scss@2.0.0
+meteoric:ionic
 meteoric:ionic-sass
 meteoric:ionicons-sass
-meteoric:ionic
 cfs:standard-packages
 cfs:gridfs
 http

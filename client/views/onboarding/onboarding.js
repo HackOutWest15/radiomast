@@ -16,10 +16,10 @@ Template.onboarding.events({
 
     var element = document.getElementById(event.index);
     if (element != null) {
-      element.classList.remove("animation-target");
+      element.classList.remove("animation-target-" + event.index);
       element.offsetWidth = element.offsetWidth;
-      element.classList.add("animation-target");
+      element.classList.add("animation-target-" + event.index);
     }
-    
+
   }
 });

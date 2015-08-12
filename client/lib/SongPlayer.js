@@ -1,6 +1,6 @@
 SongPlayer = null;
 
-Session.setDefault('crossfade', 0);
+Session.setDefault('crossfade', "0.5");
 Session.setDefault('currentSong', 'spotify:track:6JEK0CvvjDjjMUBFoXShNZ');
 
 Meteor.startup(function() {
@@ -9,7 +9,7 @@ Meteor.startup(function() {
   Tracker.autorun(function() {
     var user = Meteor.user();
 
-    if(user && user.services && user.services.spotify) {
+    if(user && user.profile) {
 
       Meteor.call('getAPISession', function(err, session){
         if(err){
@@ -22,6 +22,29 @@ Meteor.startup(function() {
           }
         });
       });
+    }
+  });
+});
+
+Meteor.startup(function() {
+  Tracker.autorun(function() {
+    var current = Broadcasts.find({_id:Session.get('currentBroadcasts')}).fetch()[0];
+    console.log('epic!');
+    console.log(current);
+
+    if(!Session.get('currentBroadcasts')) return;
+    if (!current) return;
+    if (current.playList.length === 0) return;
+
+    var newSong = current.playList[current.playList.length-1];
+    var newVolume = current.crossfade;
+
+    if(newSong !== Session.get('currentSong')) {
+      Session.set('currentSong', newSong);
+    }
+
+    if(newVolume !== Session.get('crossfade')) {
+      Session.set('crossfade', newVolume);
     }
   });
 

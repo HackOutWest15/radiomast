@@ -1,0 +1,11 @@
+<template name="latestBroadcasts">
+  <ul>
+    {{#each latestBroadCasts}}
+      <li>
+        <h2>{{userId}}</h2>
+        <h2>{{category}}</h2>
+        <button class="btn mode--primary" data-listen-to-broadcast>Listen</button>
+      </li>
+    {{/each}}
+  </ul>
+</template>

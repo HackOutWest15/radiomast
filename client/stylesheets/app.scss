@@ -5,6 +5,12 @@
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons';
 
+.menu-content {
+	h1 {
+		color:#fff;
+	}
+}
+
 .content.left-menu{
 object {
 		margin-left: auto;

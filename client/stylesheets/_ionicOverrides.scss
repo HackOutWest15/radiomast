@@ -2,7 +2,7 @@
 // Colors
 // -------------------------------
 
-$light:                           #fff !default;
+$light:                           #777777 !default;
 $stable:                          #f8f8f8 !default;
 $positive:                        #387ef5 !default;
 $calm:                            #11c1f3 !default;
@@ -11,6 +11,16 @@ $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
+
+
+
+
+
+$broadcast : #e44e95;
+$listen : #4fc1a0;
+$me : #fcae65;
+
+
 
 
 // Base
@@ -100,9 +110,9 @@ $button-light-active-border:      #ccc !default;
 
 $button-stable-bg:                $stable !default;
 $button-stable-text:              #444 !default;
-$button-stable-border:            #b2b2b2 !default;
-$button-stable-active-bg:         #e5e5e5 !default;
-$button-stable-active-border:     #a2a2a2 !default;
+$button-stable-border:            #ffffff !default;
+$button-stable-active-bg:         #ffffff !default;
+$button-stable-active-border:     #ffffff !default;
 
 $button-positive-bg:              $positive !default;
 $button-positive-text:            #fff !default;
@@ -288,7 +298,7 @@ $tabs-striped-border-width: 2px;
 // Items
 // -------------------------------
 
-$item-font-size:                  16px !default;
+$item-font-size:                  40px !default;
 $item-border-width:               1px !default;
 $item-padding:                    16px !default;
 
@@ -385,7 +395,7 @@ $item-remove-descendents-transition-function:  cubic-bezier(.25,.81,.24,1) !defa
 
 $item-left-edit-left:             8px !default;  // item's left side edit's "left" property
 
-$item-right-edit-open-width:      50px !default;
+$item-right-edit-open-width:      50x !default;
 $item-left-edit-open-width:       50px !default;
 
 $item-delete-icon-size:           24px !default;
@@ -407,9 +417,9 @@ $list-header-margin-top:          20px !default;
 // Cards
 // -------------------------------
 
-$card-header-bg:                  #F5F5F5 !default;
-$card-body-bg:                    #fff !default;
-$card-footer-bg:                  #F5F5F5 !default;
+$card-header-bg:                  #27272b !default;
+$card-body-bg:                    #27272b !default;
+$card-footer-bg:                  #27272b !default;
 
 $card-padding:                    10px !default;
 $card-border-width:               1px !default;
@@ -720,3 +730,73 @@ $z-index-click-block:             99999 !default;
 // -------------------------------
 
 $ios-statusbar-height:           20px !default;
+
+
+
+
+// Radiomast hax
+// -------------------------------
+
+
+.content.padding.broadcast.overflow-scroll{
+	color:white;
+
+}
+
+.broadcast {
+	background-color: $broadcast;
+	color:white;
+
+}
+
+.listen {
+	background-color: $listen;
+	color:white;
+}
+
+.me {
+	background-color: $me;
+	color:white;
+
+}
+
+
+.snap-drawer {
+	width: 101% !important;
+}
+
+
+.menu-left {
+	
+	.content, .list {
+		height: 101%;
+	}
+
+	.item {
+		color: white;
+		height: 33.33333333%;
+		border: none;
+
+		padding-top: 25%;
+		text-align:center;
+	}
+
+	
+	.item:nth-child(1) {
+		background-color:$broadcast;
+		border-right: 2px solid $broadcast;
+	}
+
+
+	.item:nth-child(2) {
+		background-color: $listen;
+		border-right: 2px solid $listen;
+	}
+	.item:nth-child(3) {
+		background-color: $me;
+		border-right: 2px solid $me;
+	}
+}
+
+
+

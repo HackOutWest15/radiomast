@@ -53,8 +53,22 @@
   }
 }
 
-.radiomast-green-bg {
-  background-color: #5EC2A1;
+.radiomast-green-bg{
+  /*background-color: #5EC2A1; 27272b*/
+  background-color: #27272b;
+  h2 {
+     color: #27272b;
+     display:block;
+     margin-left: 60%;
+   }
+   h3 {
+   	color: #27272b;
+   }
+   p {
+   	 color: #27272b;
+   	 margin-left: 20%;
+	 margin-right:20%;
+   }
 }
 
 .radiomast-pink-bg {

@@ -6,7 +6,6 @@
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons';
 
 
-
 .ion-slide {
   text-align: center;
   padding-top: 20px;
@@ -41,9 +40,15 @@
 
 
   &.radiomast-black-bg {
-    padding-top: 200px;
+
+    padding-top: 175px;
+
     h3 {
-      color: #fff;
+    	padding-top:50px;
+      	color: #fff;
+    }
+    img{
+		padding-left:75px;
     }
   }
 }

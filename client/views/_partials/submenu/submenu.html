@@ -2,6 +2,11 @@
   {{#each currentBroadcast}}
     {{#ionFooterBar class="bar-dark"}}
       <span>{{username}}'s radio </span>
+      {{#each currentSong}}
+      	<br>
+      	<span> {{artist}} - {{title}} </span>
+      	<img src="{{thumbnail}}" width="35px" height="35px"/>
+      {{/each}}
     {{/ionFooterBar}}
   {{/each}}
 </template>

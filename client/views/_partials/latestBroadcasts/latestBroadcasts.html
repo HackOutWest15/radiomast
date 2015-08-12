@@ -5,12 +5,10 @@
         <h2>{{userId}}</h2>
         <h2>{{category}}</h2>
 
-          {{#each playList}}
-            {{#if $last}}
+          {{#each lastArrayElement}}
               <h2>{{artist}} - {{title}}</h2>
               <h4>{{album}}</h4>
               <img src="{{thumbnail}}"/>
-            {{/if}}
           {{/each}}
 
         <button class="btn mode--primary" data-listen-to-broadcast>Listen</button>

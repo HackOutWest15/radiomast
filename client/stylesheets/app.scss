@@ -5,6 +5,26 @@
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons';
 
+.bar-footer{
+	&.bar-dark{
+		
+		span{
+			color: #fff;
+			font-size: 8;
+			text-align: center;
+			padding-left: 25px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		
+		img {
+			/*margin: auto;	*/
+			display:block;
+			margin-right: auto; 
+			margin-left: auto; 
+		}
+	}
+}
 .menu-content {
 	display:block;
 	margin-right: auto;
@@ -32,6 +52,20 @@
 	h4 {
 		padding: 5px;
 		color: #f8f8f8;
+	}
+	li {
+		h2{
+			font-size: 16px;
+		}
+	}
+	img {
+		display:block;
+		margin-right: auto;
+		margin-left: auto;
+		.resize{
+			height:100%;
+			width:100%;
+		}
 	}
 }
 

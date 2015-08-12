@@ -1,4 +1,4 @@
-Template.player.events({
+Template.search.events({
   'click [data-search]': function () {
       console.log('Search');
 

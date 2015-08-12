@@ -767,7 +767,7 @@ $ios-statusbar-height:           20px !default;
 
 
 .menu-left {
-	
+
 	.content, .list {
 		height: 101%;
 	}
@@ -781,7 +781,7 @@ $ios-statusbar-height:           20px !default;
 		text-align:center;
 	}
 
-	
+
 	.item:nth-child(1) {
 		background-color:$broadcast;
 		border-right: 2px solid $broadcast;
@@ -797,6 +797,3 @@ $ios-statusbar-height:           20px !default;
 		border-right: 2px solid $me;
 	}
 }
-
-
-

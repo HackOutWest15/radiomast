@@ -1,37 +1,51 @@
+Template.search.helpers({
+  searchResult: function () {
+    console.log(';akdjhakjsdhakjsdh');
+    return Session.get('searchResult');
+  }
+});
+
+
 Template.search.events({
-  'click [data-search]': function () {
-      console.log('Search');
+  'input [name="song-query"]': function (e) {
+    e.preventDefault();
 
-        var query = $('input[name="song-query"]').val();
-        if(query.length == 0) return;
+    var query = $(e.currentTarget).val();
 
-        var query = $('input').val();
+    console.log('Search');
+    if(query.length == 0) return;
 
+    Meteor.call('getSearch', query, function(err, result){
+      if(err){
+        return console.log(err);
+      }
+      if(!result.name) return;
 
-        Meteor.call('getSearch', query, function(err, result){
-          if(err){
-            return console.log(err);
-          }
+      // // Get info from track
+      // var title = result.name;
+      // console.log(title);
+      // var artist = result.artists[0].name;
+      // console.log(artist);
+      // var album = result.album.name;
+      // console.log(album);
+      // var albumArtURL = result.album.images[1].url;
+      // console.log(albumArtURL);
 
-          // Add song uri to field
-          $('input[name="song-uri"]').val(result.uri);
+      Session.set('searchResult', [{
+        uri: result.uri,
+        artist: result.artists[0].name,
+        album: result.album.name,
+        title:result.name,
+        image: result.album.images[1].url,
+        thumbnail: result.album.images[2].url
+      }]);
 
-          // Get info from track
-          var title = result.name;
-          console.log(title);
-          var artist = result.artists[0].name;
-          console.log(artist);
-          var album = result.album.name;
-          console.log(album);
-          var albumArtURL = result.album.images[1].url;
-          console.log(albumArtURL);
+    });
+   },
+   'click [data-play]': function () {
+      Meteor.call('playSong', Session.get('searchResult')[0], function(){
+        Session.set('searchResult', []);
+      });
 
-          // Push info to html
-          Session.set('title', title);
-          Session.set('artist', artist);
-          Session.set('album', album);
-          Session.set('albumArtURL', albumArtURL);
-
-        });
    }
 });

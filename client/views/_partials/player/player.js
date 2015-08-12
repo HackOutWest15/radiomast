@@ -1,18 +1,3 @@
-Template.player.helpers({
-  title: function () {
-    return Session.get('title');
-  },
-  artist: function () {
-    return Session.get('artist');
-  },
-  album: function () {
-    return Session.get('album');
-  },
-  albumArtURL: function () {
-    return Session.get('albumArtURL');
-  }
-});
-
 Template.player.events({
   'click [data-play]': function () {
       console.log('@#!@#!@#');

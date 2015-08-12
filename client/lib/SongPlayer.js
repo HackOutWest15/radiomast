@@ -27,6 +27,7 @@ Meteor.startup(function() {
 });
 
 Meteor.startup(function() {
+
   Tracker.autorun(function() {
     var current = Broadcasts.find({_id:Session.get('currentBroadcasts')}).fetch()[0];
     console.log('epic!');
@@ -49,7 +50,7 @@ Meteor.startup(function() {
   });
 
   Tracker.autorun(function() {
-    SongPlayer.play(Session.get('currentSong'), function(err) {
+    SongPlayer.play(Session.get('currentSong').uri, function(err) {
       if(err) {
         return console.log(err);
       }

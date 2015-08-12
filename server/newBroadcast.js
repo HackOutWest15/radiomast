@@ -3,6 +3,7 @@ Meteor.methods({
     console.log('asdad');
     return Broadcasts.insert({
       userId: Meteor.userId(),
+      username: Meteor.user().profile.id,
       isLive: true,
       crossfade: "0.5",
       audioStream: "http://",
@@ -10,9 +11,9 @@ Meteor.methods({
       playList: []
     });
   },
-  playSong: function(uri){
+  playSong: function(songObject){
     return Broadcasts.update({userId:Meteor.userId()},
-      { $push: { playList: uri}})
+      { $push: { playList: songObject}})
   },
   changeVolume: function(number){
     return Broadcasts.update({userId:Meteor.userId()}, {$set: {crossfade: number}});

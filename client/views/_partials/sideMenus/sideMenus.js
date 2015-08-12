@@ -1,10 +1,10 @@
 Meteor.startup(function(){
-
 	setTimeout(function(){
 		IonSideMenu.snapper.settings({
       		maxPosition: "390",
-      		minPosition: "-390"
-    	}); 	
+      		minPosition: "-390",
+          disable: 'right'
+    	});
 	}, 100);
 });
 

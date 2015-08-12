@@ -2,5 +2,12 @@
   <form>
     <input name="song-query" placeholder="Search song">
   </form>
-    <button class="btn mode--primary" data-search>Search Song</button>
+  {{#each searchResult}}
+    <div>
+      <h2>{{artist}} - {{title}}</h2>
+      <h4>{{album}}</h4>
+      <img src="{{image}}"/>
+      <button class="btn mode--primary" data-play>Play Song</button>
+    </div>
+  {{/each}}
 </template>

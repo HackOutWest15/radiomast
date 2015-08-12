@@ -17,6 +17,7 @@ Meteor.methods({
     });
 
     //console.log(result.data.tracks.items[0]);
+    //return result.data.tracks.items.slice(0,4);
     return result.data.tracks.items[0];
 
   }

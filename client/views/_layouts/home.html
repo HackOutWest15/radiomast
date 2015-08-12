@@ -4,18 +4,20 @@
 
       {{#ionSideMenus}}
         {{> leftSideMenu}}
-        {{> rightSideMenu}}
       {{/ionSideMenus}}
 
       {{#ionSideMenuContent}}
-      
+
         {{#ionNavView}}
           {{> yield}}
         {{/ionNavView}}
 
+        {{> submenu}}
       {{/ionSideMenuContent}}
 
     {{/ionSideMenuContainer}}
+
+
 
   {{/ionBody}}
 </template>

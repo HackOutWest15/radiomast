@@ -1,3 +1,10 @@
+var firstTime = true;
+Template.listen.rendered = function() {
+    if(firstTime){
+      IonSideMenu.snapper.open('left');
+      firstTime = false;
+    }
+};
 
     // // Wait for Cordova to load
     // //

@@ -6,6 +6,7 @@ Meteor.startup(function(){
           disable: 'right'
     	});
 	}, 100);
+
 });
 
 Template.leftSideMenu.events({

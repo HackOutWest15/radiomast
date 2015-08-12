@@ -5,6 +5,16 @@
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/_ionicons';
 
+.content.left-menu{
+object {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		margin-bottom: 30px;
+    }
+}
+
+
 
 .ion-slide {
   text-align: center;
